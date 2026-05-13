@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Arilson Albano — Software Engineering Student · 42 Luanda" },
+      { name: "description", content: "Portfolio de Arilson Albano. Estudante de Engenharia de Software, cadete da 42 Luanda. Programação low-level em C/C++, sistemas, algoritmos e desenvolvimento web." },
+      { name: "author", content: "Arilson Albano" },
+      { property: "og:title", content: "Arilson Albano — Software Engineering Student" },
+      { property: "og:description", content: "Cadete da 42 Luanda. C, C++, sistemas e algoritmos." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
