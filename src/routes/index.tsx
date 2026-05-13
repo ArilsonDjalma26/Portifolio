@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import profile from "@/assets/photos/profile.jpg";
-import at42 from "@/assets/photos/at42.jpg";
 import coding from "@/assets/photos/coding.jpg";
-import network from "@/assets/photos/network.jpg";
-import img42_1 from "@/assets/photos/img42-1.jpg";
 import {
   ArrowUpRight,
   MapPin,
@@ -32,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio de Arilson Albano. Estudante de Engenharia de Software, cadete da 42 Luanda. C, C++, sistemas, algoritmos, redes.",
+          "Portfolio de Arilson Albano. Estudante de Engenharia de Software na 42 Luanda, com foco em desenvolvimento web e base sólida em C e sistemas.",
       },
     ],
   }),
@@ -98,8 +95,8 @@ const NAV = [
 function TopNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 mix-blend-multiply">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-10">
-        <a href="#top" className="font-display text-lg tracking-tight">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3 md:px-10">
+        <a href="#top" className="font-display text-base tracking-tight md:text-lg">
           A<span className="text-accent">·</span>Albano
         </a>
         <nav className="hidden font-mono text-[11px] uppercase tracking-[0.22em] md:flex md:gap-6">
@@ -112,7 +109,7 @@ function TopNav() {
         </nav>
         <a
           href="#contacto"
-          className="group hidden items-center gap-2 rounded-full border border-foreground/25 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] hover:border-foreground md:inline-flex"
+          className="group hidden items-center gap-2 rounded-full border border-foreground/25 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.2em] hover:border-foreground md:inline-flex"
         >
           Contactar
           <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -161,9 +158,8 @@ function Hero() {
               className="reveal mt-8 max-w-xl text-pretty text-lg leading-relaxed text-foreground/75 md:text-xl"
               style={{ animationDelay: "200ms" }}
             >
-              Construo sistemas a partir do zero — em C, na linha de comando, com curiosidade pelo que acontece
-              <em className="font-display"> debaixo</em> da abstração. Atualmente cadete da 42 Luanda,
-              aprofundando algoritmos, low-level e arquitetura de software.
+              Desenvolvedor em formação na 42 Luanda, focado em construir experiências web simples e úteis.
+              Tenho base em C e sistemas, e sigo aprendendo frontend no dia a dia.
             </p>
 
             <div
@@ -188,7 +184,7 @@ function Hero() {
             <dl className="reveal mt-12 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-foreground/15 pt-8 sm:grid-cols-4" style={{ animationDelay: "420ms" }}>
               {[
                 ["Localização", "Luanda, AO"],
-                ["Foco", "C · C++ · Sistemas"],
+                ["Foco", "Web · Frontend · React"],
                 ["Cohort", "42 Luanda · 2024→"],
                 ["Idiomas", "PT · EN"],
               ].map(([k, v]) => (
@@ -201,12 +197,9 @@ function Hero() {
           </div>
 
           {/* right: portrait */}
-          <div className="md:col-span-5">
-            <div className="reveal relative" style={{ animationDelay: "160ms" }}>
-              <div className="absolute -left-3 -top-3 hidden font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/55 md:block">
-                Fig. 01 — Retrato
-              </div>
-              <div className="relative aspect-[4/5] overflow-hidden bg-foreground/5">
+          <div className="md:col-span-5 md:flex md:justify-end">
+            <div className="reveal relative w-full max-w-[280px] md:max-w-[320px]" style={{ animationDelay: "160ms" }}>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-foreground/5">
                 <img
                   src={profile}
                   alt="Arilson Albano"
@@ -214,25 +207,6 @@ function Hero() {
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/10" />
               </div>
-              <div className="mt-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/55">
-                <span>Luanda · 2025</span>
-                <span>{`{ engineering · in · progress }`}</span>
-              </div>
-            </div>
-
-            <div className="mt-8 grid grid-cols-3 gap-3 font-mono text-[11px] uppercase tracking-[0.2em]">
-              <a href="https://www.linkedin.com/in/arilson-albano-9647b7329" target="_blank" rel="noreferrer" className="group flex items-center justify-between border-b border-foreground/20 py-3 hover:border-accent">
-                <span>LinkedIn</span>
-                <ArrowUpRight size={12} className="text-foreground/50 group-hover:text-accent" />
-              </a>
-              <a href="mailto:arilsonalbano625@gmail.com" className="group flex items-center justify-between border-b border-foreground/20 py-3 hover:border-accent">
-                <span>Email</span>
-                <ArrowUpRight size={12} className="text-foreground/50 group-hover:text-accent" />
-              </a>
-              <a href="tel:+244937827435" className="group flex items-center justify-between border-b border-foreground/20 py-3 hover:border-accent">
-                <span>Tel</span>
-                <ArrowUpRight size={12} className="text-foreground/50 group-hover:text-accent" />
-              </a>
             </div>
           </div>
         </div>
@@ -243,19 +217,19 @@ function Hero() {
         <div className="marquee-track flex w-max gap-12 whitespace-nowrap font-display text-2xl italic md:text-3xl">
           {Array.from({ length: 2 }).flatMap((_, i) =>
             [
-              "Low-level Programming",
+              "Web Development",
               "·",
-              "Algorithms & Data Structures",
+              "Frontend",
               "·",
-              "C / C++",
+              "React / TypeScript",
               "·",
-              "Systems",
+              "UI / UX",
               "·",
-              "Networking",
+              "APIs",
               "·",
-              "42 Luanda Cadet",
+              "42 Luanda",
               "·",
-              "Software Engineering",
+              "Product-minded",
               "·",
             ].map((t, j) => (
               <span key={`${i}-${j}`} className={t === "·" ? "text-accent" : "text-foreground/80"}>
@@ -279,7 +253,7 @@ function About() {
         kicker="Sobre / About"
         title={
           <>
-            Apaixonado por entender o que existe <em className="text-accent">por baixo</em> do software que usamos.
+            Gosto de construir software simples, útil e <em className="text-accent">bem cuidado</em>.
           </>
         }
       />
@@ -288,29 +262,25 @@ function About() {
         <div className="md:col-span-7 md:col-start-2">
           <div className="space-y-6 text-pretty text-lg leading-relaxed text-foreground/80">
             <p>
-              Comecei no ensino médio técnico, em <strong className="font-medium text-foreground">Informática de Gestão</strong>, onde
-              aprendi a tratar software como ferramenta — algo que resolve problemas reais para pessoas reais. Foi ali
-              que escrevi o meu primeiro programa, montei a minha primeira rede e percebi que tecnologia não me parecia
-              trabalho.
+              Comecei no ensino médio técnico em <strong className="font-medium text-foreground">Informática de Gestão</strong> e
+              aprendi a pensar software como solução para pessoas e negócios.
             </p>
             <p>
               Hoje sou cadete da <strong className="font-medium text-foreground">42 Luanda</strong>, onde a metodologia
-              peer-to-peer, a ausência de aulas tradicionais e os projetos rigorosos me forçam a pensar como engenheiro:
-              ler especificações, escrever código defensivo, depurar com calma, ler manuais.
+              peer-to-peer me ajuda a evoluir rápido: ler specs, testar, e revisar código com colegas.
             </p>
             <p>
-              Gosto de programação <strong className="font-medium text-foreground">low-level</strong> — gerenciamento de
-              memória, ponteiros, processos, sinais — e de problemas algorítmicos onde a solução elegante importa mais
-              do que a rápida.
+              Tenho base em <strong className="font-medium text-foreground">C e sistemas</strong>, mas meu foco hoje é
+              desenvolvimento web: interfaces, acessibilidade e performance.
             </p>
           </div>
 
           <ul className="mt-12 grid grid-cols-1 gap-x-10 gap-y-5 sm:grid-cols-2">
             {[
-              ["C / C++", "Linguagens principais"],
-              ["UNIX / Linux", "Ambiente diário"],
-              ["Algoritmos", "Onde gasto tempo"],
-              ["Sistemas", "Para onde caminho"],
+              ["JavaScript / TypeScript", "Base no frontend"],
+              ["React / Vite", "Stack de UI"],
+              ["C / C++", "Base técnica"],
+              ["UX / UI", "Experiência do usuário"],
             ].map(([a, b]) => (
               <li key={a} className="flex items-baseline gap-3 border-b border-foreground/15 pb-3">
                 <span className="font-mono text-xs text-accent">→</span>
@@ -373,10 +343,10 @@ function Origem() {
           kicker="Origem · Ensino Médio Técnico"
           title={
             <>
-              Informática de Gestão — onde a curiosidade virou <em className="text-accent">ofício</em>.
+              Informática de Gestão — base técnica e <em className="text-accent">primeiros projetos</em>.
             </>
           }
-          intro="Quatro anos a aprender que um sistema é mais do que código: é processo, dado, gente. A formação técnica deu-me as bases — programação, redes, bancos de dados — e os primeiros projetos reais."
+          intro="Quatro anos de formação técnica em programação, redes e bases de dados, com projetos reais e foco prático."
         />
 
         {/* timeline */}
@@ -447,40 +417,27 @@ function Cursus42() {
       <SectionHead
         n="03"
         kicker="42 Luanda · Cadet"
-        title={
-          <>
-            Sem aulas, sem professores. Apenas <em className="text-accent">pares</em>, especificações e código.
-          </>
-        }
-        intro="Na 42, cada projeto é um problema entregue cru: uma página de exigências e um deadline. Aprendi a ler, a perguntar, a defender o meu código numa avaliação peer-to-peer e a sair de cada bug com mais leitura do que linhas escritas."
+        title={"42 Luanda"}
       />
 
-      {/* photo collage */}
-      <div className="mt-16 grid grid-cols-12 gap-3 md:gap-5">
-        <figure className="col-span-12 md:col-span-7">
-          <div className="relative aspect-[16/10] overflow-hidden bg-foreground/5">
-            <img src={coding} alt="Arilson na 42 Luanda" className="h-full w-full object-cover" />
-            <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-4 font-mono text-[10px] uppercase tracking-[0.22em] text-background mix-blend-difference">
-              <span>42 Luanda · Cluster</span>
-              <span>Fig. 02</span>
-            </div>
+      {/* photo + intro */}
+      <div className="mt-12 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start">
+        <div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-foreground/5">
+            <img src={coding} alt="Sessão de trabalho" className="h-full w-full object-cover" />
           </div>
-        </figure>
-        <figure className="col-span-6 md:col-span-5">
-          <div className="relative aspect-[4/5] overflow-hidden bg-foreground/5">
-            <img src={at42} alt="Sessão de trabalho" className="h-full w-full object-cover" />
-          </div>
-        </figure>
-        <figure className="col-span-6 md:col-span-3 md:col-start-1">
-          <div className="relative aspect-square overflow-hidden bg-foreground/5">
-            <img src={network} alt="Infraestrutura de rede" className="h-full w-full object-cover" />
-          </div>
-        </figure>
-        <figure className="col-span-12 md:col-span-9">
-          <div className="relative aspect-[16/7] overflow-hidden bg-foreground/5">
-            <img src={img42_1} alt="42 Luanda" className="h-full w-full object-cover" />
-          </div>
-        </figure>
+        </div>
+        <div className="md:pt-2">
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/55">
+            42 Luanda, ritmo intenso e prático
+          </p>
+          <h3 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+            Sem aulas tradicionais — apenas pares, projetos e código.
+          </h3>
+          <p className="mt-4 text-pretty text-base leading-relaxed text-foreground/70 md:text-lg">
+            Na 42, cada projeto é um problema real com requisitos e prazo. Aprendo fazendo, testando e revisando com colegas.
+          </p>
+        </div>
       </div>
 
       {/* values */}
@@ -612,8 +569,7 @@ function Projects42() {
               Onze projetos, uma <em className="text-accent">trajetória</em>.
             </h2>
             <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-background/70 md:text-lg">
-              Cada projeto da 42 é um capítulo: começa em frustração, atravessa horas de manual, e termina numa
-              compreensão nova. Aqui está o caderno aberto.
+              "Cada projeto da 42 é um passo prático para ganhar consistência e autonomia."
             </p>
           </div>
         </div>
@@ -622,7 +578,7 @@ function Projects42() {
           {PROJECTS_42.map(({ no, name, track, body, learned, Icon, inProgress }) => (
             <article
               key={no}
-              className="group relative flex flex-col bg-foreground p-7 transition hover:bg-[oklch(0.22_0.012_60)]"
+              className="group relative flex flex-col bg-foreground p-7 transition hover:bg-[oklch(0.22_0.02_250)]"
             >
               <header className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
@@ -657,18 +613,18 @@ function Projects42() {
 
 /* ---------- stack ---------- */
 
-const TECH = ["C", "C++", "Python", "JavaScript", "HTML", "CSS", "Bash", "Git", "Linux"];
+const TECH = ["TypeScript", "JavaScript", "React", "Vite", "HTML", "CSS", "Tailwind", "Git", "Linux"];
 const KNOW = [
-  "Algoritmos",
-  "Programação low-level",
-  "Estruturas de dados",
-  "Parsing & lexers",
-  "Concorrência",
-  "Redes / TCP-IP",
-  "Shell & processos",
-  "Memória dinâmica",
-  "Resolução de problemas",
-  "Sistemas UNIX",
+  "Frontend moderno",
+  "Componentes reutilizáveis",
+  "Acessibilidade",
+  "Design systems",
+  "APIs REST",
+  "Integração com backend",
+  "Performance web",
+  "Testes básicos",
+  "Git workflow",
+  "Comunicação com produto",
 ];
 
 function Stack() {
@@ -679,7 +635,7 @@ function Stack() {
         kicker="Stack & Conhecimentos"
         title={
           <>
-            As ferramentas e os <em className="text-accent">conceitos</em> que carrego no cinto.
+            Ferramentas e <em className="text-accent">bases</em> do meu dia a dia.
           </>
         }
       />
@@ -716,7 +672,7 @@ function Stack() {
             {[
               ["~11", "Projetos 42"],
               ["4", "Anos técnico"],
-              ["∞", "man pages lidas"],
+              ["2026", "Foco em web"],
             ].map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-5xl tracking-tight text-foreground md:text-6xl">{n}</div>
@@ -749,24 +705,24 @@ function Now() {
         <div className="mt-16 grid gap-px bg-foreground/15 md:grid-cols-2">
           {[
             {
-              t: "Cub3D",
-              k: "Em desenvolvimento ativo",
-              b: "Engine de raycasting em C: parsing de cenas .cub, renderização de paredes texturizadas, sprites, controlos. Onde matemática vira pixel.",
+              t: "Portfolio & UI",
+              k: "Em evolução",
+              b: "Refinando layout, tipografia e acessibilidade para uma experiência limpa e rápida.",
             },
             {
-              t: "C++ & OOP",
-              k: "Aprofundando paradigmas",
-              b: "Encapsulamento, herança, RAII, templates. Saindo do código puramente procedural para arquitetura orientada a objetos.",
+              t: "Frontend moderno",
+              k: "Foco principal",
+              b: "React, TypeScript e Vite, com componentes reutilizáveis e boas práticas de UI.",
             },
             {
-              t: "Desenvolvimento Web",
+              t: "Integração web",
               k: "Em paralelo",
-              b: "JavaScript moderno, fundamentos de frontend e o ecossistema web — para não estar isolado do mundo onde a maioria do software vive hoje.",
+              b: "Consumo de APIs, estados e formulários, conectando o frontend ao backend.",
             },
             {
-              t: "Engenharia de Software",
-              k: "Visão de longo prazo",
-              b: "Padrões, arquitetura, testes, leitura de código profissional. Construir a ponte entre cadete e engenheiro.",
+              t: "Fundamentos",
+              k: "Base sólida",
+              b: "C e sistemas ajudam na performance e no raciocínio, mas não são meu foco principal hoje.",
             },
           ].map(({ t, k, b }) => (
             <div key={t} className="bg-background p-8 md:p-10">
@@ -798,7 +754,7 @@ const DOCS = [
     cta: "Abrir PDF",
   },
   {
-    title: "Certificado · 42 Luanda",
+    title: "Resultados academicos 42 Luanda",
     sub: "Resultados acadêmicos",
     href: "/docs/certificado-42-luanda.pdf",
     cta: "Abrir PDF",

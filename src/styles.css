@@ -74,12 +74,12 @@
 
 :root {
   --radius: 0.625rem;
-  /* Editorial palette: warm paper, deep ink, ember accent */
-  --paper: oklch(0.965 0.012 80);
-  --ink: oklch(0.18 0.012 60);
-  --ember: oklch(0.58 0.155 38);
-  --moss: oklch(0.42 0.045 145);
-  --rule: oklch(0.84 0.018 75);
+  /* Editorial palette: cool paper, deep ink, blue accent */
+  --paper: oklch(0.97 0.012 245);
+  --ink: oklch(0.18 0.03 250);
+  --ember: oklch(0.62 0.16 250);
+  --moss: oklch(0.46 0.05 210);
+  --rule: oklch(0.86 0.02 245);
   --background: var(--paper);
   --foreground: var(--ink);
   --card: oklch(1 0 0);
@@ -127,13 +127,13 @@
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
+  --accent: oklch(0.68 0.16 250);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
+  --ring: oklch(0.58 0.08 250);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
